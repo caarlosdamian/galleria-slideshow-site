@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+  .h1-bold {
+    @apply text-[56px] font-bold leading-[64px];
+  }
+
+  .h2-bold {
+    @apply text-[24px] font-bold leading-[29px];
+  }
+
+  .h2-semibold {
+    @apply text-[24px] font-semibold leading-[29px];
+  }
+
+  .h3-bold {
+    @apply text-lg font-bold leading-[22px];
+  }
+
+  .h3-semibold {
+    @apply text-lg font-semibold leading-[22px];
+  }
+
+  .base-medium {
+    @apply text-[14px] font-medium leading-[28px];
+  }
+
+  .base-semibold {
+    @apply text-[14px] font-semibold leading-[28px];
+  }
+
+  .base-bold {
+    @apply text-[14px] font-bold leading-[140%];
+  }
+
+  .paragraph-regular {
+    @apply text-[15px] font-normal leading-[19px];
+  }
+
+  .paragraph-medium {
+    @apply text-[15px] font-medium leading-[19px];
+  }
+
+  .paragraph-semibold {
+    @apply text-[15px] font-semibold leading-[20.8px];
+  }
+
+  .paragraph-small-bold {
+    @apply text-[13px] font-bold leading-[17px];
+  }
+
+  .paragraph-small-semibold {
+    @apply text-[13px] font-semibold leading-[17px];
+  }
+
+  .paragraph-small {
+    @apply text-[13px] font-normal leading-[17px];
+  }
+
+  .small-medium {
+    @apply text-[12px] font-medium leading-[17px];
+  }
+
+  .small-semibold {
+    @apply text-[12px] font-semibold leading-[17px];
+  }
+
+  .link-one {
+    @apply text-[12px] leading-normal font-bold tracking-[2.471px]
+  }
+
+  .link-two {
+    @apply text-[9px] font-bold tracking-[1.929px] underline
+  }
+}
