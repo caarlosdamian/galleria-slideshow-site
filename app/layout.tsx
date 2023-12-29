@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Libre_Baskerville } from 'next/font/google';
+import { Header } from '@/components';
 import './globals.css';
 
 const libre = Libre_Baskerville({
@@ -20,7 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={libre.className}>
-        <main className="max-w-autoScreen mx-auto">{children}</main>
+        <main className="max-w-autoScreen mx-auto">
+          <Header />
+          {children}
+        </main>
       </body>
     </html>
   );
