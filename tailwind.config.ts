@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        gallery: 'repeat(4,310px)',
+      },
+      gridAutoRows: {
+        'pixel': '10px',
+      },
       spacing: {
         autoScreen: '1440px',
       },
