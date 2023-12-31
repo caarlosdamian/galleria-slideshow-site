@@ -1,5 +1,9 @@
-import mongoose from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 
-const Paint = mongoose.models.Paint;
+const PaintSchema = new Schema({
+
+})
+
+const Paint = mongoose.models.Paint || mongoose.model('Paint',PaintSchema);
 
 export default Paint;
