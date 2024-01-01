@@ -12,10 +12,10 @@ const getData = async () => {
 };
 
 export default async function Home() {
-  const data: PaintI[] = await getData();
+  const paintsInfo: PaintI[] = await getData();
   return (
     <section className="w-ful p-6 sm:p-10 flex items-center justify-center">
-      <Gallery data={data} />
+      <Gallery paintInfo={paintsInfo} />
     </section>
   );
 }
