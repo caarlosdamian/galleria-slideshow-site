@@ -5,6 +5,7 @@ export interface PaintI {
   source: string;
   artist: Artist;
   images: Images;
+  _id: string;
 }
 
 interface Images {
