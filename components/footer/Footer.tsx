@@ -4,7 +4,7 @@ import React from 'react';
 
 export const Footer = ({ paintsInfo }: { paintsInfo: PaintI }) => {
   return (
-    <footer className="sticky bottom-0 sm:flex w-full h-20 bg-white z-50 flex flex-col gap-4 ">
+    <footer className="sticky bottom-0 sm:flex w-full h-20 bg-white z-50 flex flex-col gap-4 lg:static">
       <div className="bg-custom-flashWhite w-full h-[1px] relative">
         <div className={`bg-black absolute left-0 h-[1px] w-[10%]`}></div>
       </div>
