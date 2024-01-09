@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { getData } from '@/services';
 import { PaintI } from '@/types';
 import {
@@ -18,9 +18,14 @@ export const GalleryContextProvider = ({
 }) => {
   const [paints, setPaints] = useState([]);
   const getInfo = async () => {
-    const res = await getData('/api/paints');
-    console.log('res',res)
-    setPaints(res);
+    const local = await localStorage.getItem('paints');
+    if (!local) {
+      const res = await getData('/api/paints');
+      localStorage.setItem('paints', JSON.stringify(res));
+      setPaints(res);
+    } else {
+      setPaints(JSON.parse(local));
+    }
   };
   useEffect(() => {
     getInfo();
@@ -38,4 +43,3 @@ export const useGalleryContext = () => {
   }
   return context;
 };
-

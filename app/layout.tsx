@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Libre_Baskerville } from 'next/font/google';
 import { Header } from '@/components';
 import './globals.css';
+import { GalleryContextProvider } from '@/context/galleryContext';
 
 const libre = Libre_Baskerville({
   weight: ['400', '700'],
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={libre.className}>
         <main className="max-w-autoScreen mx-auto">
-          <Header />
+          <GalleryContextProvider>
+            <Header />
+          </GalleryContextProvider>
           {children}
         </main>
       </body>
