@@ -4,12 +4,14 @@ import { Footer } from '@/components/footer/Footer';
 import { getData } from '@/services';
 import { PaintI } from '@/types';
 import { GalleryContextProvider } from '@/context/galleryContext';
+import { Modal } from '@/components/modal/Modal';
 
 const PaintDetails = async ({ params }: { params: { id: string } }) => {
   const paintsInfo: PaintI = await getData(`/api/paints/${params.id}`);
   return (
     <GalleryContextProvider>
       <div className="min-h-[calc(100vh-120px)] flex flex-col justify-between relative pt-6 sm:pt-10 lg:pt-[100px] gap-[80px]">
+        <Modal/>
         <div className="flex items-center justify-center flex-col  gap-24  sm:gap-16 px-6 sm:px-10 mb-[75px] lg:flex-row lg:justify-between lg:gap-[410px]">
           <div className="relative w-[327px] h-[280px] sm:w-[457px] sm:h-[560px] sm:self-start">
             <Image
