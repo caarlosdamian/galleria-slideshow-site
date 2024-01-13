@@ -16,6 +16,12 @@ export const Modal = ({ img }: { img: string }) => {
         onClick={() => setIsOpen(false)}
       ></div>
       <div className="relative">
+        <span
+          className="absolute top-[-38px] right-0 text-white base-medium cursor-pointer"
+          onClick={() => setIsOpen(false)}
+        >
+          CLOSE
+        </span>
         <Image
           src={img}
           alt="hero-large"
